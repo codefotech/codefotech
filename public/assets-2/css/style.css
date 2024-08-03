@@ -75,6 +75,7 @@ section {
   }
 }
 
+
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
@@ -86,11 +87,11 @@ section {
   color: #fff;
 }
 
-@media (max-width: 992px) {
+/* @media (max-width: 992px) {
   .breadcrumbs {
     margin-top: 57px;
   }
-}
+} */
 
 .breadcrumbs h2 {
   font-size: 28px;
@@ -2084,6 +2085,7 @@ section {
 
 .blog .blog-pagination li a {
   color: #1e81bb;
+  border: 1px solid #1e81bb;
   padding: 7px 16px;
   display: flex;
   align-items: center;

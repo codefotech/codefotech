@@ -3,11 +3,11 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('frontend.index');
+    return view('frontend.layouts.main');
 });
-// Route::get('/dashboard', function () {
-//     return view('backend.index');
-// });
+Route::get('/blog', function () {
+    return view('frontend.layouts.blog');
+});
 Route::get('/login', function () {
     return view('auth.login');
 });

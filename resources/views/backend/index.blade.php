@@ -17,7 +17,7 @@
 
     <!-- Favicon -->
     {{-- <link rel="icon" type="image/x-icon" href="{{ asset('assets/img/favicon/favicon.ico') }}" /> --}}
-    <link href="{{ asset('assets-2/img/favicon.png') }}" rel="icon">
+    <link href="{{ asset('assets-2/img/favicon.ico') }}" rel="icon">
     <link href="{{ asset('assets-2/img/CodeFoTech-1.png') }}" rel="Codefotech">
 
     <!-- Fonts -->

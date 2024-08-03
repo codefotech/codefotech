@@ -15,7 +15,7 @@
                 <li><a class="nav-link scrollto" href="#about">About</a></li>
                 <li><a class="nav-link scrollto" href="#services">Services</a></li>
                 <li><a class="nav-link scrollto" href="marketplace.html">Marketplace</a></li>
-                <li><a class="nav-link scrollto" href="blog.html">Blog</a></li>
+                <li><a class="nav-link scrollto" href="{{ asset('/blog') }}">Blog</a></li>
                 <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
             </ul>
             <i class="bi bi-list mobile-nav-toggle"></i>

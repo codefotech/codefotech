@@ -12,7 +12,7 @@
     <meta content="" name="keywords">
 
     <!-- Favicons -->
-    <link href="{{ asset('assets-2/img/favicon.png') }}" rel="icon">
+    <link href="{{ asset('assets-2/img/favicon.ico') }}" rel="icon">
     <link href="{{ asset('assets-2/img/CodeFoTech-1.png') }}" rel="Codefotech">
 
 
@@ -56,26 +56,7 @@
 <body>
 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-
-@include('frontend.partials.header')
-@include('frontend.partials.home')
-<main id="main">
-    @include('frontend.partials.about')
-    @include('frontend.partials.services')
-    @include('frontend.partials.work')
-    @include('frontend.partials.plan')
-    @include('frontend.partials.faq')
-    @include('frontend.partials.testimonials')
-    @include('frontend.partials.team')
-    @include('frontend.partials.clients')
-    @include('frontend.partials.blogs')
-    @include('frontend.partials.quote')
-</main>
-@include('frontend.partials.footer')
-
-
-<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
-        class="bi bi-arrow-up-short"></i></a>
+@yield('content')
 
 
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" type="4a94b68b0014e1d7a45d6744-text/javascript"></script>
