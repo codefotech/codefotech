@@ -57,21 +57,21 @@
 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
 
-@include('frontend.layouts.header')
-@include('frontend.layouts.home')
+@include('frontend.partials.header')
+@include('frontend.partials.home')
 <main id="main">
-    @include('frontend.layouts.about')
-    @include('frontend.layouts.services')
-    @include('frontend.layouts.work')
-    @include('frontend.layouts.plan')
-    @include('frontend.layouts.faq')
-    @include('frontend.layouts.testimonials')
-    @include('frontend.layouts.team')
-    @include('frontend.layouts.clients')
-    @include('frontend.layouts.blogs')
-    @include('frontend.layouts.quote')
+    @include('frontend.partials.about')
+    @include('frontend.partials.services')
+    @include('frontend.partials.work')
+    @include('frontend.partials.plan')
+    @include('frontend.partials.faq')
+    @include('frontend.partials.testimonials')
+    @include('frontend.partials.team')
+    @include('frontend.partials.clients')
+    @include('frontend.partials.blogs')
+    @include('frontend.partials.quote')
 </main>
-@include('frontend.layouts.footer')
+@include('frontend.partials.footer')
 
 
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
