@@ -5,9 +5,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('frontend.layouts.main');
 });
-Route::get('/blog', function () {
-    return view('frontend.layouts.blog');
-});
 Route::get('/login', function () {
     return view('auth.login');
 });
