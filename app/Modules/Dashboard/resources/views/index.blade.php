@@ -22,9 +22,9 @@
                         <div class="col-md-6 text-center text-md-end order-1 order-md-2">
                             <div class="card-body pb-0 px-0 px-md-4 ps-0">
                                 <img src="{{ asset('assets/img/illustrations/illustration-john-light.png') }}"
-                                    height="180" alt="View Profile"
-                                    data-app-light-img="illustrations/illustration-john-light.png"
-                                    data-app-dark-img="illustrations/illustration-john-dark.png" />
+                                     height="180" alt="View Profile"
+                                     data-app-light-img="illustrations/illustration-john-light.png"
+                                     data-app-dark-img="illustrations/illustration-john-dark.png" />
                             </div>
                         </div>
                     </div>
@@ -92,7 +92,7 @@
                                     <h5 class="mb-1">Report</h5>
                                     <div class="dropdown">
                                         <button class="btn p-0" type="button" id="totalTransaction"
-                                            data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                                data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                             <i class="mdi mdi-dots-vertical mdi-24px"></i>
                                         </button>
                                         <div class="dropdown-menu dropdown-menu-end" aria-labelledby="totalTransaction">
@@ -152,7 +152,7 @@
                             <h5 class="mb-1">Performance</h5>
                             <div class="dropdown">
                                 <button class="btn p-0" type="button" id="performanceDropdown" data-bs-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
+                                        aria-haspopup="true" aria-expanded="false">
                                     <i class="mdi mdi-dots-vertical mdi-24px"></i>
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="performanceDropdown">
@@ -177,7 +177,7 @@
                         <h5 class="card-title m-0 me-2">Project Statistics</h5>
                         <div class="dropdown">
                             <button class="btn p-0" type="button" id="projectStatus" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
+                                    aria-haspopup="true" aria-expanded="false">
                                 <i class="mdi mdi-dots-vertical mdi-24px"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="projectStatus">
@@ -198,7 +198,7 @@
                                     <div class="avatar-initial bg-lighter rounded">
                                         <div>
                                             <img src="{{ asset('assets/img/icons/misc/3d-illustration.png') }}"
-                                                alt="User" class="h-25" />
+                                                 alt="User" class="h-25" />
                                         </div>
                                     </div>
                                 </div>
@@ -215,7 +215,7 @@
                                     <div class="avatar-initial bg-lighter rounded">
                                         <div>
                                             <img src="{{ asset('assets/img/icons/misc/finance-app-design.png') }}"
-                                                alt="User" class="h-25" />
+                                                 alt="User" class="h-25" />
                                         </div>
                                     </div>
                                 </div>
@@ -232,7 +232,7 @@
                                     <div class="avatar-initial bg-lighter rounded">
                                         <div>
                                             <img src="{{ asset('assets/img/icons/misc/4-square.png') }}" alt="User"
-                                                class="h-25" />
+                                                 class="h-25" />
                                         </div>
                                     </div>
                                 </div>
@@ -249,7 +249,7 @@
                                     <div class="avatar-initial bg-lighter rounded">
                                         <div>
                                             <img src="{{ asset('assets/img/icons/misc/delta-web-app.png') }}"
-                                                alt="User" class="h-25" />
+                                                 alt="User" class="h-25" />
                                         </div>
                                     </div>
                                 </div>
@@ -266,7 +266,7 @@
                                     <div class="avatar-initial bg-lighter rounded">
                                         <div>
                                             <img src="{{ asset('assets/img/icons/misc/ecommerce-website.png') }}"
-                                                alt="User" class="h-25" />
+                                                 alt="User" class="h-25" />
                                         </div>
                                     </div>
                                 </div>
@@ -377,7 +377,7 @@
                             <h5 class="mb-1">Sales Country</h5>
                             <div class="dropdown">
                                 <button class="btn p-0" type="button" id="salesCountryDropdown"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="mdi mdi-dots-vertical mdi-24px"></i>
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="salesCountryDropdown">
@@ -406,7 +406,7 @@
                         </div>
                         <div class="dropdown">
                             <button class="btn p-0" type="button" id="earningReportsTabsId" data-bs-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
+                                    aria-haspopup="true" aria-expanded="false">
                                 <i class="mdi mdi-dots-vertical mdi-24px"></i>
                             </button>
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="earningReportsTabsId">
@@ -419,8 +419,8 @@
                         <ul class="nav nav-tabs nav-tabs-widget pb-3 gap-4 mx-1 d-flex flex-nowrap" role="tablist">
                             <li class="nav-item">
                                 <div class="nav-link btn active d-flex flex-column align-items-center justify-content-center"
-                                    role="tab" data-bs-toggle="tab" data-bs-target="#navs-orders-id"
-                                    aria-controls="navs-orders-id" aria-selected="true">
+                                     role="tab" data-bs-toggle="tab" data-bs-target="#navs-orders-id"
+                                     aria-controls="navs-orders-id" aria-selected="true">
                                     <button type="button" class="btn btn-icon rounded-pill btn-label-google-plus">
                                         <i class="mdi mdi-google mdi-20px"></i>
                                     </button>
@@ -428,8 +428,8 @@
                             </li>
                             <li class="nav-item">
                                 <div class="nav-link btn d-flex flex-column align-items-center justify-content-center"
-                                    role="tab" data-bs-toggle="tab" data-bs-target="#navs-sales-id"
-                                    aria-controls="navs-sales-id" aria-selected="false">
+                                     role="tab" data-bs-toggle="tab" data-bs-target="#navs-sales-id"
+                                     aria-controls="navs-sales-id" aria-selected="false">
                                     <button type="button" class="btn btn-icon rounded-pill btn-label-facebook">
                                         <i class="mdi mdi-facebook mdi-20px"></i>
                                     </button>
@@ -437,8 +437,8 @@
                             </li>
                             <li class="nav-item">
                                 <div class="nav-link btn d-flex flex-column align-items-center justify-content-center"
-                                    role="tab" data-bs-toggle="tab" data-bs-target="#navs-profit-id"
-                                    aria-controls="navs-profit-id" aria-selected="false">
+                                     role="tab" data-bs-toggle="tab" data-bs-target="#navs-profit-id"
+                                     aria-controls="navs-profit-id" aria-selected="false">
                                     <button type="button" class="btn btn-icon rounded-pill btn-label-instagram">
                                         <i class="mdi mdi-instagram mdi-20px"></i>
                                     </button>
@@ -446,8 +446,8 @@
                             </li>
                             <li class="nav-item">
                                 <div class="nav-link btn d-flex flex-column align-items-center justify-content-center"
-                                    role="tab" data-bs-toggle="tab" data-bs-target="#navs-income-id"
-                                    aria-controls="navs-income-id" aria-selected="false">
+                                     role="tab" data-bs-toggle="tab" data-bs-target="#navs-income-id"
+                                     aria-controls="navs-income-id" aria-selected="false">
                                     <button type="button" class="btn btn-icon rounded-pill btn-label-twitter">
                                         <i class="mdi mdi-twitter mdi-20px"></i>
                                     </button>
@@ -455,7 +455,7 @@
                             </li>
                             <li class="nav-item">
                                 <div class="nav-link btn d-flex align-items-center justify-content-center disabled"
-                                    role="tab" data-bs-toggle="tab" aria-selected="false">
+                                     role="tab" data-bs-toggle="tab" aria-selected="false">
                                     <button type="button" class="btn btn-icon rounded bg-label-secondary">
                                         <i class="mdi mdi-plus mdi-20px"></i>
                                     </button>
@@ -467,49 +467,49 @@
                                 <div class="table-responsive text-nowrap">
                                     <table class="table table-borderless">
                                         <thead>
-                                            <tr>
-                                                <th class="fw-medium ps-0 text-heading">Parameter</th>
-                                                <th class="pe-0 fw-medium text-heading">Status</th>
-                                                <th class="pe-0 fw-medium text-heading">Conversion</th>
-                                                <th class="pe-0 text-end text-heading">total revenue</th>
-                                            </tr>
+                                        <tr>
+                                            <th class="fw-medium ps-0 text-heading">Parameter</th>
+                                            <th class="pe-0 fw-medium text-heading">Status</th>
+                                            <th class="pe-0 fw-medium text-heading">Conversion</th>
+                                            <th class="pe-0 text-end text-heading">total revenue</th>
+                                        </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td class="text-heading fw-semibold ps-0">Email Marketing
-                                                    Campaign
-                                                </td>
-                                                <td class="pe-0"><span
-                                                        class="badge rounded-pill bg-label-primary">Active</span>
-                                                </td>
-                                                <td class="pe-0 text-success">+24%</td>
-                                                <td class="pe-0 text-end fw-semibold h6">$42,857</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-heading fw-semibold ps-0">Google Workspace</td>
-                                                <td class="pe-0">
-                                                    <span class="badge rounded-pill bg-label-warning">Completed</span>
-                                                </td>
-                                                <td class="text-danger pe-0">-12%</td>
-                                                <td class="pe-0 text-end fw-semibold h6">$850</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-heading fw-semibold ps-0">Affiliation Program
-                                                </td>
-                                                <td class="pe-0"><span
-                                                        class="badge rounded-pill bg-label-primary">Active</span>
-                                                </td>
-                                                <td class="text-success pe-0">+24%</td>
-                                                <td class="pe-0 text-end fw-semibold h6">$5,576</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-heading fw-semibold ps-0">Google Adsense</td>
-                                                <td class="pe-0"><span class="badge rounded-pill bg-label-info">In
+                                        <tr>
+                                            <td class="text-heading fw-semibold ps-0">Email Marketing
+                                                Campaign
+                                            </td>
+                                            <td class="pe-0"><span
+                                                    class="badge rounded-pill bg-label-primary">Active</span>
+                                            </td>
+                                            <td class="pe-0 text-success">+24%</td>
+                                            <td class="pe-0 text-end fw-semibold h6">$42,857</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-heading fw-semibold ps-0">Google Workspace</td>
+                                            <td class="pe-0">
+                                                <span class="badge rounded-pill bg-label-warning">Completed</span>
+                                            </td>
+                                            <td class="text-danger pe-0">-12%</td>
+                                            <td class="pe-0 text-end fw-semibold h6">$850</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-heading fw-semibold ps-0">Affiliation Program
+                                            </td>
+                                            <td class="pe-0"><span
+                                                    class="badge rounded-pill bg-label-primary">Active</span>
+                                            </td>
+                                            <td class="text-success pe-0">+24%</td>
+                                            <td class="pe-0 text-end fw-semibold h6">$5,576</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-heading fw-semibold ps-0">Google Adsense</td>
+                                            <td class="pe-0"><span class="badge rounded-pill bg-label-info">In
                                                         Draft</span>
-                                                </td>
-                                                <td class="text-success pe-0">0%</td>
-                                                <td class="pe-0 text-end fw-semibold h6">$0</td>
-                                            </tr>
+                                            </td>
+                                            <td class="text-success pe-0">0%</td>
+                                            <td class="pe-0 text-end fw-semibold h6">$0</td>
+                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -518,52 +518,52 @@
                                 <div class="table-responsive text-nowrap">
                                     <table class="table table-borderless">
                                         <thead>
-                                            <tr>
-                                                <th class="fw-medium ps-0 text-heading">parameter</th>
-                                                <th class="pe-0 fw-medium text-heading">Status</th>
-                                                <th class="pe-0 fw-medium text-heading">Conversion</th>
-                                                <th class="pe-0 text-end text-heading">total revenue</th>
-                                            </tr>
+                                        <tr>
+                                            <th class="fw-medium ps-0 text-heading">parameter</th>
+                                            <th class="pe-0 fw-medium text-heading">Status</th>
+                                            <th class="pe-0 fw-medium text-heading">Conversion</th>
+                                            <th class="pe-0 text-end text-heading">total revenue</th>
+                                        </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td class="text-heading fw-semibold ps-0">Create Audiences in
-                                                    Ads Manager
-                                                </td>
-                                                <td class="pe-0"><span
-                                                        class="badge rounded-pill bg-label-primary">Active</span>
-                                                </td>
-                                                <td class="pe-0 text-danger">-8%</td>
-                                                <td class="pe-0 text-end fw-semibold h6">$322</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-heading fw-semibold ps-0">Facebook page
-                                                    advertising
-                                                </td>
-                                                <td class="pe-0"><span
-                                                        class="badge rounded-pill bg-label-primary">Active</span>
-                                                </td>
-                                                <td class="text-success pe-0">+19%</td>
-                                                <td class="pe-0 text-end fw-semibold h6">$5,634</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-heading fw-semibold ps-0">Messenger
-                                                    advertising
-                                                </td>
-                                                <td class="pe-0"><span
-                                                        class="badge rounded-pill bg-label-danger">Expired</span>
-                                                </td>
-                                                <td class="text-danger pe-0">-23%</td>
-                                                <td class="pe-0 text-end fw-semibold h6">$751</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-heading fw-semibold ps-0">Video campaign</td>
-                                                <td class="pe-0">
-                                                    <span class="badge rounded-pill bg-label-warning">Completed</span>
-                                                </td>
-                                                <td class="text-success pe-0">+21%</td>
-                                                <td class="pe-0 text-end fw-semibold h6">$3,585</td>
-                                            </tr>
+                                        <tr>
+                                            <td class="text-heading fw-semibold ps-0">Create Audiences in
+                                                Ads Manager
+                                            </td>
+                                            <td class="pe-0"><span
+                                                    class="badge rounded-pill bg-label-primary">Active</span>
+                                            </td>
+                                            <td class="pe-0 text-danger">-8%</td>
+                                            <td class="pe-0 text-end fw-semibold h6">$322</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-heading fw-semibold ps-0">Facebook page
+                                                advertising
+                                            </td>
+                                            <td class="pe-0"><span
+                                                    class="badge rounded-pill bg-label-primary">Active</span>
+                                            </td>
+                                            <td class="text-success pe-0">+19%</td>
+                                            <td class="pe-0 text-end fw-semibold h6">$5,634</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-heading fw-semibold ps-0">Messenger
+                                                advertising
+                                            </td>
+                                            <td class="pe-0"><span
+                                                    class="badge rounded-pill bg-label-danger">Expired</span>
+                                            </td>
+                                            <td class="text-danger pe-0">-23%</td>
+                                            <td class="pe-0 text-end fw-semibold h6">$751</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-heading fw-semibold ps-0">Video campaign</td>
+                                            <td class="pe-0">
+                                                <span class="badge rounded-pill bg-label-warning">Completed</span>
+                                            </td>
+                                            <td class="text-success pe-0">+21%</td>
+                                            <td class="pe-0 text-end fw-semibold h6">$3,585</td>
+                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -572,51 +572,51 @@
                                 <div class="table-responsive text-nowrap">
                                     <table class="table table-borderless">
                                         <thead>
-                                            <tr>
-                                                <th class="fw-medium ps-0 text-heading">parameter</th>
-                                                <th class="pe-0 fw-medium text-heading">Status</th>
-                                                <th class="pe-0 fw-medium text-heading">Conversion</th>
-                                                <th class="pe-0 text-end text-heading">total revenue</th>
-                                            </tr>
+                                        <tr>
+                                            <th class="fw-medium ps-0 text-heading">parameter</th>
+                                            <th class="pe-0 fw-medium text-heading">Status</th>
+                                            <th class="pe-0 fw-medium text-heading">Conversion</th>
+                                            <th class="pe-0 text-end text-heading">total revenue</th>
+                                        </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td class="text-heading fw-semibold ps-0">Create shopping
-                                                    advertising
-                                                </td>
-                                                <td class="pe-0"><span class="badge rounded-pill bg-label-info">In
+                                        <tr>
+                                            <td class="text-heading fw-semibold ps-0">Create shopping
+                                                advertising
+                                            </td>
+                                            <td class="pe-0"><span class="badge rounded-pill bg-label-info">In
                                                         Draft</span>
-                                                </td>
-                                                <td class="pe-0 text-danger">-15%</td>
-                                                <td class="pe-0 text-end fw-semibold h6">$599</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-heading fw-semibold ps-0">IGTV advertising</td>
-                                                <td class="pe-0">
-                                                    <span class="badge rounded-pill bg-label-warning">Completed</span>
-                                                </td>
-                                                <td class="text-success pe-0">+37%</td>
-                                                <td class="pe-0 text-end fw-semibold h6">$1,467</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-heading fw-semibold ps-0">Collection
-                                                    advertising
-                                                </td>
-                                                <td class="pe-0"><span class="badge rounded-pill bg-label-info">In
+                                            </td>
+                                            <td class="pe-0 text-danger">-15%</td>
+                                            <td class="pe-0 text-end fw-semibold h6">$599</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-heading fw-semibold ps-0">IGTV advertising</td>
+                                            <td class="pe-0">
+                                                <span class="badge rounded-pill bg-label-warning">Completed</span>
+                                            </td>
+                                            <td class="text-success pe-0">+37%</td>
+                                            <td class="pe-0 text-end fw-semibold h6">$1,467</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-heading fw-semibold ps-0">Collection
+                                                advertising
+                                            </td>
+                                            <td class="pe-0"><span class="badge rounded-pill bg-label-info">In
                                                         Draft</span>
-                                                </td>
-                                                <td class="text-danger pe-0">0%</td>
-                                                <td class="pe-0 text-end fw-semibold h6">$0</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-heading fw-semibold ps-0">Stories advertising
-                                                </td>
-                                                <td class="pe-0"><span
-                                                        class="badge rounded-pill bg-label-primary">Active</span>
-                                                </td>
-                                                <td class="text-success pe-0">+29%</td>
-                                                <td class="pe-0 text-end fw-semibold h6">$4,546</td>
-                                            </tr>
+                                            </td>
+                                            <td class="text-danger pe-0">0%</td>
+                                            <td class="pe-0 text-end fw-semibold h6">$0</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-heading fw-semibold ps-0">Stories advertising
+                                            </td>
+                                            <td class="pe-0"><span
+                                                    class="badge rounded-pill bg-label-primary">Active</span>
+                                            </td>
+                                            <td class="text-success pe-0">+29%</td>
+                                            <td class="pe-0 text-end fw-semibold h6">$4,546</td>
+                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -625,51 +625,51 @@
                                 <div class="table-responsive text-nowrap">
                                     <table class="table table-borderless">
                                         <thead>
-                                            <tr>
-                                                <th class="fw-medium ps-0 text-heading">Parameter</th>
-                                                <th class="pe-0 fw-medium text-heading">Status</th>
-                                                <th class="pe-0 fw-medium text-heading">Conversion</th>
-                                                <th class="pe-0 text-end text-heading">total revenue</th>
-                                            </tr>
+                                        <tr>
+                                            <th class="fw-medium ps-0 text-heading">Parameter</th>
+                                            <th class="pe-0 fw-medium text-heading">Status</th>
+                                            <th class="pe-0 fw-medium text-heading">Conversion</th>
+                                            <th class="pe-0 text-end text-heading">total revenue</th>
+                                        </tr>
                                         </thead>
                                         <tbody>
-                                            <tr>
-                                                <td class="text-heading fw-semibold ps-0">Interests
-                                                    advertising
-                                                </td>
-                                                <td class="pe-0"><span
-                                                        class="badge rounded-pill bg-label-danger">Expired</span>
-                                                </td>
-                                                <td class="pe-0 text-success">+2%</td>
-                                                <td class="pe-0 text-end fw-semibold h6">$404</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-heading fw-semibold ps-0">Community
-                                                    advertising
-                                                </td>
-                                                <td class="pe-0"><span
-                                                        class="badge rounded-pill bg-label-primary">Active</span>
-                                                </td>
-                                                <td class="text-success pe-0">+25%</td>
-                                                <td class="pe-0 text-end fw-semibold h6">$399</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-heading fw-semibold ps-0">Device advertising
-                                                </td>
-                                                <td class="pe-0">
-                                                    <span class="badge rounded-pill bg-label-warning">Completed</span>
-                                                </td>
-                                                <td class="text-success pe-0">+21%</td>
-                                                <td class="pe-0 text-end fw-semibold h6">$177</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="text-heading fw-semibold ps-0">Campaigning</td>
-                                                <td class="pe-0"><span
-                                                        class="badge rounded-pill bg-label-primary">Active</span>
-                                                </td>
-                                                <td class="text-danger pe-0">-5%</td>
-                                                <td class="pe-0 text-end fw-semibold h6">$1,139</td>
-                                            </tr>
+                                        <tr>
+                                            <td class="text-heading fw-semibold ps-0">Interests
+                                                advertising
+                                            </td>
+                                            <td class="pe-0"><span
+                                                    class="badge rounded-pill bg-label-danger">Expired</span>
+                                            </td>
+                                            <td class="pe-0 text-success">+2%</td>
+                                            <td class="pe-0 text-end fw-semibold h6">$404</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-heading fw-semibold ps-0">Community
+                                                advertising
+                                            </td>
+                                            <td class="pe-0"><span
+                                                    class="badge rounded-pill bg-label-primary">Active</span>
+                                            </td>
+                                            <td class="text-success pe-0">+25%</td>
+                                            <td class="pe-0 text-end fw-semibold h6">$399</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-heading fw-semibold ps-0">Device advertising
+                                            </td>
+                                            <td class="pe-0">
+                                                <span class="badge rounded-pill bg-label-warning">Completed</span>
+                                            </td>
+                                            <td class="text-success pe-0">+21%</td>
+                                            <td class="pe-0 text-end fw-semibold h6">$177</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="text-heading fw-semibold ps-0">Campaigning</td>
+                                            <td class="pe-0"><span
+                                                    class="badge rounded-pill bg-label-primary">Active</span>
+                                            </td>
+                                            <td class="text-danger pe-0">-5%</td>
+                                            <td class="pe-0 text-end fw-semibold h6">$1,139</td>
+                                        </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -688,7 +688,7 @@
                             <h5 class="mb-1">Weekly Sales</h5>
                             <div class="dropdown">
                                 <button class="btn p-0" type="button" id="weeklySalesDropdown"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="mdi mdi-dots-vertical mdi-24px"></i>
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="weeklySalesDropdown">
@@ -739,7 +739,7 @@
                             <h5 class="mb-1">Visits by Day</h5>
                             <div class="dropdown">
                                 <button class="btn p-0" type="button" id="visitsByDayDropdown"
-                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <i class="mdi mdi-dots-vertical mdi-24px"></i>
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="visitsByDayDropdown">
@@ -777,7 +777,7 @@
                             <h5 class="mb-1">Activity Timeline</h5>
                             <div class="dropdown">
                                 <button class="btn p-0" type="button" id="timelineDropdown" data-bs-toggle="dropdown"
-                                    aria-haspopup="true" aria-expanded="false">
+                                        aria-haspopup="true" aria-expanded="false">
                                     <i class="mdi mdi-dots-vertical mdi-24px"></i>
                                 </button>
                                 <div class="dropdown-menu dropdown-menu-end" aria-labelledby="timelineDropdown">
@@ -801,7 +801,7 @@
                                     <p class="text-muted mb-2">Product introduction and details video</p>
                                     <div class="d-flex">
                                         <a href="https://www.youtube.com/@pixinvent1515" target="_blank"
-                                            class="text-truncate">
+                                           class="text-truncate">
                                             <span class="badge badge-center rounded-pill bg-danger w-px-20 h-px-20 me-2">
                                                 <i class="mdi mdi-play text-white"></i>
                                             </span>
@@ -834,7 +834,7 @@
                                     <div class="d-flex">
                                         <a href="javascript:void(0)" class="me-3">
                                             <img src="{{ asset('assets/img/icons/misc/pdf.png') }}" alt="PDF image"
-                                                width="20" class="me-2" />
+                                                 width="20" class="me-2" />
                                             <span class="fw-semibold text-muted">presentation.pdf</span>
                                         </a>
                                     </div>
