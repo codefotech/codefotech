@@ -14,7 +14,7 @@
                         <a href="{{ asset('/') }}" class="logo d-flex align-items-center">
                             <!-- <img src="assets-2/img/logo.png" alt="">
                             <span>FlexStart</span> -->
-                
+
                             <img src="{{ asset('assets-2/img/CodeFoTech-1.png') }}" style="max-height: 40px" alt="Codefotech">
                         </a>
                     </div>
@@ -23,40 +23,66 @@
                     <div class="card-body mt-2">
                         <h4 class="mb-2 fw-semibold">Reset Password 🔒</h4>
                         <p class="mb-4">Your new password must be different from previously used passwords</p>
-                        <form id="formAuthentication" class="mb-0" action="auth-login-basic.html" method="POST">
-                            <div class="mb-3 form-password-toggle">
-                                <div class="input-group input-group-merge">
-                                    <div class="form-floating form-floating-outline">
-                                        <input type="password" id="password" class="form-control" name="password"
-                                            placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                                            aria-describedby="password" />
-                                        <label for="password">New Password</label>
-                                    </div>
-                                    <span class="input-group-text cursor-pointer"><i
-                                            class="mdi mdi-eye-off-outline"></i></span>
+                        {!! Form::open([
+                            'route' => 'reset-password.create',
+                            'method' => 'POST',
+                            'class' => 'mb-3',
+                            'id' => 'form_id',
+                            'enctype' => 'multipart/form-data',
+                            'role' => 'form'
+                        ]) !!}
+
+                        {!! Form::hidden('token', $token) !!}
+                        {!! Form::hidden('email', old('email')) !!}
+
+                        <div class="mb-3 form-password-toggle">
+                            <div class="input-group input-group-merge">
+                                <div class="form-floating form-floating-outline {{ $errors->has('password') ? 'has-error' : '' }}">
+                                    {!! Form::password('password', [
+                                        'class' => 'form-control',
+                                        'id' => 'password',
+                                        'placeholder' => '&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;',
+                                        'aria-describedby' => 'password'
+                                    ]) !!}
+                                    {!! Form::label('password', 'New Password') !!}
+                                    {!! $errors->first('password', '<span class="help-block text-danger">:message</span>') !!}
                                 </div>
+                                <span class="input-group-text cursor-pointer">
+            <i class="mdi mdi-eye-off-outline"></i>
+        </span>
                             </div>
-                            <div class="mb-3 form-password-toggle">
-                                <div class="input-group input-group-merge">
-                                    <div class="form-floating form-floating-outline">
-                                        <input type="password" id="confirm-password" class="form-control"
-                                            name="confirm-password"
-                                            placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                                            aria-describedby="password" />
-                                        <label for="confirm-password">Confirm Password</label>
-                                    </div>
-                                    <span class="input-group-text cursor-pointer"><i
-                                            class="mdi mdi-eye-off-outline"></i></span>
+                        </div>
+
+                        <div class="mb-3 form-password-toggle">
+                            <div class="input-group input-group-merge">
+                                <div class="form-floating form-floating-outline {{ $errors->has('password_confirmation') ? 'has-error' : '' }}">
+                                    {!! Form::password('password_confirmation', [
+                                        'class' => 'form-control',
+                                        'id' => 'confirm-password',
+                                        'placeholder' => '&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;',
+                                        'aria-describedby' => 'confirm-password'
+                                    ]) !!}
+                                    {!! Form::label('password_confirmation', 'Confirm Password') !!}
+                                    {!! $errors->first('password_confirmation', '<span class="help-block text-danger">:message</span>') !!}
                                 </div>
+                                <span class="input-group-text cursor-pointer">
+            <i class="mdi mdi-eye-off-outline"></i>
+        </span>
                             </div>
-                            <button class="btn btn-primary d-grid w-100 mb-3">Set new password</button>
-                            <div class="text-center">
-                                <a href="{{ url('/login') }}" class="d-flex align-items-center justify-content-center">
-                                    <i class="mdi mdi-chevron-left scaleX-n1-rtl mdi-24px"></i>
-                                    Back to login
-                                </a>
-                            </div>
-                        </form>
+                        </div>
+
+                        {!! Form::button('Set new password', ['type' => 'submit', 'class' => 'btn btn-primary d-grid w-100 mb-3']) !!}
+
+                        <div class="text-center">
+                            <a href="{{ url('/login') }}" class="d-flex align-items-center justify-content-center">
+                                <i class="mdi mdi-chevron-left scaleX-n1-rtl mdi-24px"></i>
+                                Back to login
+                            </a>
+                        </div>
+
+                        {!! Form::close() !!}
+
+
                     </div>
                 </div>
                 <!-- /Reset Password -->

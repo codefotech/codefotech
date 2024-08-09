@@ -41,10 +41,18 @@
 
     <ul class="menu-inner py-1">
         <!-- Dashboards -->
-        <li class="menu-item active">
+        <li class="menu-item">
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons mdi mdi-home-outline"></i>
                 <div data-i18n="Dashboards">Dashboards</div>
+            </a>
+        </li>
+
+        <!-- Blog -->
+        <li class="menu-item active">
+            <a href="{{ route('blog.list') }}" class="menu-link">
+                <i class="menu-icon tf-icons mdi mdi-window-maximize"></i>
+                <div data-i18n="Blog">Blog</div>
             </a>
         </li>
 

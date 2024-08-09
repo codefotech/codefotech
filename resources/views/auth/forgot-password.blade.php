@@ -15,7 +15,7 @@
                         <a href="{{ asset('/') }}" class="logo d-flex align-items-center">
                             <!-- <img src="assets-2/img/logo.png" alt="">
                             <span>FlexStart</span> -->
-                
+
                             <img src="{{ asset('assets-2/img/CodeFoTech-1.png') }}" style="max-height: 40px" alt="Codefotech">
                         </a>
                     </div>
@@ -23,14 +23,30 @@
                     <div class="card-body mt-2">
                         <h4 class="mb-2">Forgot Password? 🔒</h4>
                         <p class="mb-4">Enter your email and we'll send you instructions to reset your password</p>
-                        <form id="formAuthentication" class="mb-3" action="auth-reset-password-basic.html" method="POST">
-                            <div class="form-floating form-floating-outline mb-3">
-                                <input type="text" class="form-control" id="email" name="email"
-                                    placeholder="Enter your email" autofocus />
-                                <label>Email</label>
-                            </div>
-                            <button class="btn btn-primary d-grid w-100">Send Reset Link</button>
-                        </form>
+                        {!! Form::open([
+                            'route' => 'forgot-password.create',
+                            'method' => 'POST',
+                            'class' => 'mb-3',
+                            'id' => 'form_id',
+                            'enctype' => 'multipart/form-data',
+                            'role' => 'form'
+                        ]) !!}
+
+                        <div class="form-floating form-floating-outline mb-3 {{ $errors->has('email') ? 'has-error' : '' }}">
+                            {!! Form::text('email', null, [
+                                'class' => 'form-control',
+                                'id' => 'email',
+                                'placeholder' => 'Enter your email',
+                                'autofocus' => true
+                            ]) !!}
+                            {!! Form::label('email', 'Email') !!}
+                            {!! $errors->first('email', '<span class="help-block text-danger">:message</span>') !!}
+                        </div>
+
+                        {!! Form::button('Send Reset Link', ['type' => 'submit', 'class' => 'btn btn-primary d-grid w-100']) !!}
+
+                        {!! Form::close() !!}
+
                         <div class="text-center">
                             <a href="{{ url('/login') }}" class="d-flex align-items-center justify-content-center">
                                 <i class="mdi mdi-chevron-left scaleX-n1-rtl mdi-24px"></i>

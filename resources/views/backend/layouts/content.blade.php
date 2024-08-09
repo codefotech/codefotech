@@ -3,7 +3,7 @@
 @section('header-resources')
 @endsection
 
-@section('body-content')
+@section('dashboard-content')
     @include('backend.partials.message')
     @yield('content')
 @endsection

@@ -12,7 +12,7 @@
             <div class="container">
 
                 <ol>
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="{{ url('/') }}">Home</a></li>
                     <li>Blog</li>
                 </ol>
                 <h2>Blog</h2>
@@ -31,7 +31,7 @@
                         <article class="entry">
 
                             <div class="entry-img">
-                                <img src="assets-2/img/blog/blog-1.jpg" alt="" class="img-fluid">
+                                <img src="{{ asset('assets-2/img/blog/blog-1.jpg') }}" alt="" class="img-fluid">
                             </div>
 
                             <h2 class="entry-title">
@@ -59,7 +59,7 @@
                                     dolore.
                                 </p>
                                 <div class="read-more">
-                                    <a href="#">Read More</a>
+                                    <a href="{{ url('/blog/blog_details') }}">Read More</a>
                                 </div>
                             </div>
 
@@ -68,7 +68,7 @@
                         <article class="entry">
 
                             <div class="entry-img">
-                                <img src="assets-2/img/blog/blog-2.jpg" alt="" class="img-fluid">
+                                <img src="{{ asset('assets-2/img/blog/blog-2.jpg') }}" alt="" class="img-fluid">
                             </div>
 
                             <h2 class="entry-title">
@@ -96,7 +96,7 @@
                                     odio quos distinctio.
                                 </p>
                                 <div class="read-more">
-                                    <a href="#">Read More</a>
+                                    <a href="{{ url('/blog/blog_details') }}">Read More</a>
                                 </div>
                             </div>
 
@@ -105,7 +105,7 @@
                         <article class="entry">
 
                             <div class="entry-img">
-                                <img src="assets-2/img/blog/blog-3.jpg" alt="" class="img-fluid">
+                                <img src="{{ asset('assets-2/img/blog/blog-3.jpg') }}" alt="" class="img-fluid">
                             </div>
 
                             <h2 class="entry-title">
@@ -132,7 +132,7 @@
                                     dolores velit.
                                 </p>
                                 <div class="read-more">
-                                    <a href="#">Read More</a>
+                                    <a href="{{ url('/blog/blog_details') }}">Read More</a>
                                 </div>
                             </div>
 
@@ -141,7 +141,7 @@
                         <article class="entry">
 
                             <div class="entry-img">
-                                <img src="assets-2/img/blog/blog-4.jpg" alt="" class="img-fluid">
+                                <img src="{{ asset('assets-2/img/blog/blog-4.jpg') }}" alt="" class="img-fluid">
                             </div>
 
                             <h2 class="entry-title">
@@ -170,7 +170,7 @@
                                     earum ut nesciunt sed corrupti nemo.
                                 </p>
                                 <div class="read-more">
-                                    <a href="#">Read More</a>
+                                    <a href="{{ url('/blog/blog_details') }}">Read More</a>
                                 </div>
                             </div>
 
@@ -214,31 +214,31 @@
                             <h3 class="sidebar-title">Recent Posts</h3>
                             <div class="sidebar-item recent-posts">
                                 <div class="post-item clearfix">
-                                    <img src="assets-2/img/blog/blog-recent-1.jpg" alt="">
+                                    <img src="{{ asset('assets-2/img/blog/blog-recent-1.jpg') }}" alt="">
                                     <h4><a href="#">Nihil blanditiis at in nihil autem</a></h4>
                                     <time datetime="2020-01-01">Jan 1, 2020</time>
                                 </div>
 
                                 <div class="post-item clearfix">
-                                    <img src="assets-2/img/blog/blog-recent-2.jpg" alt="">
+                                    <img src="{{ asset('assets-2/img/blog/blog-recent-2.jpg') }}" alt="">
                                     <h4><a href="#">Quidem autem et impedit</a></h4>
                                     <time datetime="2020-01-01">Jan 1, 2020</time>
                                 </div>
 
                                 <div class="post-item clearfix">
-                                    <img src="assets-2/img/blog/blog-recent-3.jpg" alt="">
+                                    <img src="{{ asset('assets-2/img/blog/blog-recent-3.jpg') }}" alt="">
                                     <h4><a href="#">Id quia et et ut maxime similique occaecati ut</a></h4>
                                     <time datetime="2020-01-01">Jan 1, 2020</time>
                                 </div>
 
                                 <div class="post-item clearfix">
-                                    <img src="assets-2/img/blog/blog-recent-4.jpg" alt="">
+                                    <img src="{{ asset('assets-2/img/blog/blog-recent-4.jpg') }}" alt="">
                                     <h4><a href="#">Laborum corporis quo dara net para</a></h4>
                                     <time datetime="2020-01-01">Jan 1, 2020</time>
                                 </div>
 
                                 <div class="post-item clearfix">
-                                    <img src="assets-2/img/blog/blog-recent-5.jpg" alt="">
+                                    <img src="{{ asset('assets-2/img/blog/blog-recent-5.jpg') }}" alt="">
                                     <h4><a href="#">Et dolores corrupti quae illo quod dolor</a></h4>
                                     <time datetime="2020-01-01">Jan 1, 2020</time>
                                 </div>

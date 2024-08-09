@@ -1,5 +1,5 @@
 <!-- ======= Footer Start ======= -->
-<footer id="contact" class="contact container-fluid text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
+<footer id="contact" class="contact container-fluid text-light mt-5 wow fadeInUp" data-wow-delay="0.1s" style="background: #efedfd;">
     <div class="container">
         <div class="row gx-5">
             <div class="col-lg-4 col-md-6 footer-about">

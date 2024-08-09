@@ -15,7 +15,7 @@
                         <a href="{{ asset('/') }}" class="logo d-flex align-items-center">
                             <!-- <img src="assets-2/img/logo.png" alt="">
                             <span>FlexStart</span> -->
-                
+
                             <img src="{{ asset('assets-2/img/CodeFoTech-1.png') }}" style="max-height: 40px" alt="Codefotech">
                         </a>
                     </div>
@@ -25,39 +25,60 @@
                         <h4 class="mb-2 fw-semibold">Welcome to CodeFoTech! 👋</h4>
                         <p class="mb-4">Please sign-in to your account and start the adventure</p>
 
-                        <form id="formAuthentication" class="mb-3" action="index.html" method="POST">
-                            <div class="form-floating form-floating-outline mb-3">
-                                <input type="text" class="form-control" id="email" name="email-username"
-                                    placeholder="Enter your email or username" autofocus />
-                                <label for="email">Email or Username</label>
-                            </div>
-                            <div class="mb-3">
-                                <div class="form-password-toggle">
-                                    <div class="input-group input-group-merge">
-                                        <div class="form-floating form-floating-outline">
-                                            <input type="password" id="password" class="form-control" name="password"
-                                                placeholder="&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;"
-                                                aria-describedby="password" />
-                                            <label for="password">Password</label>
-                                        </div>
-                                        <span class="input-group-text cursor-pointer"><i
-                                                class="mdi mdi-eye-off-outline"></i></span>
+                        {!! Form::open([
+                            'route' => 'login.check',
+                            'method' => 'POST',
+                            'class' => 'mb-3',
+                            'id' => 'form_id',
+                            'enctype' => 'multipart/form-data',
+                            'role' => 'form'
+                        ]) !!}
+
+                        <div class="form-floating form-floating-outline mb-3 {{ $errors->has('email') ? 'has-error' : '' }}">
+                            {!! Form::text('email', old('email'), [
+                                'class' => 'form-control required',
+                                'placeholder' => 'Enter your email',
+                                'autofocus' => 'true'
+                            ]) !!}
+                            {!! Form::label('email', 'Email') !!}
+                            {!! $errors->first('email', '<span class="help-block text-danger">:message</span>') !!}
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="form-password-toggle">
+                                <div class="input-group input-group-merge">
+                                    <div class="form-floating form-floating-outline {{ $errors->has('password') ? 'has-error' : '' }}">
+                                        {!! Form::password('password', [
+                                            'class' => 'form-control required',
+                                            'placeholder' => '&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;&#xb7;',
+                                            'aria-describedby' => 'password'
+                                        ]) !!}
+                                        {!! Form::label('password', 'Password') !!}
+                                        {!! $errors->first('password', '<span class="help-block text-danger">:message</span>') !!}
                                     </div>
+                                    <span class="input-group-text cursor-pointer">
+                    <i class="mdi mdi-eye-off-outline"></i>
+                </span>
                                 </div>
                             </div>
-                            <div class="mb-3 d-flex justify-content-between">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" id="remember-me" />
-                                    <label class="form-check-label" for="remember-me"> Remember Me </label>
-                                </div>
-                                <a href="{{ url('/forgot-password') }}" class="float-end mb-1">
-                                    <span>Forgot Password?</span>
-                                </a>
+                        </div>
+
+                        <div class="mb-3 d-flex justify-content-between">
+                            <div class="form-check">
+                                {!! Form::checkbox('remember', '1', false, ['class' => 'form-check-input', 'id' => 'remember-me']) !!}
+                                {!! Form::label('remember-me', 'Remember Me', ['class' => 'form-check-label']) !!}
                             </div>
-                            <div class="mb-3">
-                                <button class="btn btn-primary d-grid w-100" type="submit">Sign in</button>
-                            </div>
-                        </form>
+                            <a href="{{ url('/forgot-password') }}" class="float-end mb-1">
+                                <span>Forgot Password?</span>
+                            </a>
+                        </div>
+
+                        <div class="mb-3">
+                            {!! Form::button('Login', ['type' => 'submit', 'class' => 'btn btn-primary d-grid w-100']) !!}
+                        </div>
+
+                        {!! Form::close() !!}
+
 
                         <p class="text-center">
                             <span>New on our platform?</span>
