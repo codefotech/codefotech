@@ -140,9 +140,9 @@
                                 {!! Form::text('price', old('price', $data->discount) ?? '0.00', [
                                     'class' => 'form-control',
                                     'placeholder' => '0.00',
-                                    'step' => '0.01'
+                                    'step' => '0.01',
                                 ]) !!}
-                                <span class="input-group-text bg-primary text-white">
+                                <span class="input-group-text codefotech_color text-white">
                                     <i class="bx bx-money"></i>
                                 </span>
                             </div>
@@ -159,9 +159,9 @@
                                 {!! Form::text('discount_price', old('discount_price', $data->discount_price) ?? '0.00', [
                                     'class' => 'form-control',
                                     'placeholder' => '0.00',
-                                    'step' => '0.01'
+                                    'step' => '0.01',
                                 ]) !!}
-                                <span class="input-group-text bg-primary text-white">
+                                <span class="input-group-text codefotech_color text-white">
                                     <i class="bx bxs-discount"></i>
                                 </span>
                             </div>
@@ -174,8 +174,14 @@
                     <div class="input-group row {{ $errors->has('thumbnail') ? 'has-error' : '' }}">
                         {!! Form::label('thumbnail', 'Thumbnail (optional):', ['class' => 'col-md-3 control-label']) !!}
                         <div class="col-md-9">
-                            <img id="newThumbnail" src="{{ old('thumbnail', $data->thumbnail) ? asset($data->thumbnail) : asset('images/no_image.png') }}" style="height:120px;"/>
-                            {!! Form::file('thumbnail', ['class' => 'form-control mt-3', 'id' => 'thumbnail', 'oninput' => "document.getElementById('newThumbnail').src=window.URL.createObjectURL(this.files[0])"]) !!}
+                            <img id="newThumbnail"
+                                src="{{ old('thumbnail', $data->thumbnail) ? asset($data->thumbnail) : asset('images/no_image.png') }}"
+                                style="height:120px;" />
+                            {!! Form::file('thumbnail', [
+                                'class' => 'form-control mt-3',
+                                'id' => 'thumbnail',
+                                'oninput' => "document.getElementById('newThumbnail').src=window.URL.createObjectURL(this.files[0])",
+                            ]) !!}
                             {!! $errors->first('thumbnail', '<span class="help-block">:message</span>') !!}
                         </div>
                     </div>
@@ -197,7 +203,7 @@
                         <div class="col-md-6">
                             {!! Form::button('Update', [
                                 'type' => 'submit',
-                                'class' => 'btn btn-primary'
+                                'class' => 'btn btn-primary',
                             ]) !!}
                         </div>
                     </div>
@@ -210,7 +216,6 @@
     </div>
 
     {!! form::close() !!}
-
 @endsection
 
 @section('footer-script')

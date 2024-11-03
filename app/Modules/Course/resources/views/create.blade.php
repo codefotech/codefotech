@@ -27,8 +27,8 @@
                 <div class="card-header">
                     <h3 class="card-title pt-2 pb-2"> Create New Course </h3>
                     <div class="card-tools">
-                        <a href="{{ route('course.list') }}" class="btn btn-sm btn-primary"><i
-                                class="bx bx-list-ul pr-2"></i> Course List </a>
+                        <a href="{{ route('course.list') }}" class="btn btn-sm btn-primary"><i class="bx bx-list-ul pr-2"></i>
+                            Course List </a>
                     </div>
                 </div>
 
@@ -142,7 +142,7 @@
                                     'placeholder' => '0.00',
                                     'step' => '0.01',
                                 ]) !!}
-                                <span class="input-group-text bg-primary text-white">
+                                <span class="input-group-text codefotech_color text-white">
                                     <i class="bx bx-money"></i>
                                 </span>
                             </div>
@@ -161,7 +161,7 @@
                                     'placeholder' => '0.00',
                                     'step' => '0.01',
                                 ]) !!}
-                                <span class="input-group-text bg-primary text-white">
+                                <span class="input-group-text codefotech_color text-white">
                                     <i class="bx bxs-discount"></i>
                                 </span>
                             </div>
@@ -200,12 +200,12 @@
                         <div class="col-md-6">
                             {!! Form::button('Add', [
                                 'type' => 'submit',
-                                'class' => 'btn btn-primary'
+                                'class' => 'btn btn-primary',
                             ]) !!}
                             {!! Form::button('Reset', [
                                 'type' => 'button',
                                 'class' => 'btn btn-secondary',
-                                'id' => 'reset_button'
+                                'id' => 'reset_button',
                             ]) !!}
                         </div>
                     </div>
@@ -216,7 +216,6 @@
     </div>
 
     {!! form::close() !!}
-
 @endsection
 
 @section('footer-script')
@@ -224,15 +223,15 @@
     <script src="{{ asset('plugins/select2/js/select2.min.js') }}"></script>
 
     <script>
-         $('#reset_button').click(function() {
+        $('#reset_button').click(function() {
             $('#form_id')[0].reset(); // Reset all form fields
             $('.select2').val(null).trigger('change'); // Reset select2 fields
         });
         $(document).ready(function() {
-        $('.select2').select2({
-            placeholder: 'Select One',
-            allowClear: true
+            $('.select2').select2({
+                placeholder: 'Select One',
+                allowClear: true
+            });
         });
-    });
     </script>
 @endsection

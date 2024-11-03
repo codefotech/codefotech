@@ -34,7 +34,7 @@
     @include('partials.datatable_js')
 
     <script>
-        $(function () {
+        $(function() {
             let currentPage = 1;
 
             function loadCategories(page) {
@@ -45,27 +45,33 @@
                         _token: $('input[name="_token"]').val(),
                         page: page
                     },
-                    success: function (data) {
+                    success: function(data) {
                         let categories = data.data;
                         let categoryGrid = $('#category-grid');
                         let pagination = $('#pagination');
                         categoryGrid.empty();
                         pagination.empty();
 
-                        categories.forEach(function (category) {
-                            let thumbnail = category.thumbnail ? category.thumbnail : "{{ asset('images/no_image.png') }}";
-                            let description = category.description ? category.description : 'No description available'; // Fallback if description is null
+                        categories.forEach(function(category) {
+                            let thumbnail = category.thumbnail ? category.thumbnail :
+                                "{{ asset('images/no_image.png') }}";
+                            let description = category.description ? category.description :
+                                'No description available'; // Fallback if description is null
 
                             // Truncate description to 100 characters
-                            description = description.length > 100 ? description.substring(0, 100) + '...' : description;
+                            description = description.length > 100 ? description.substring(0,
+                                100) + '...' : description;
 
                             // Ensure keywords are handled properly
-                            let keywords = category.keywords ? JSON.parse(category.keywords) : []; // Convert JSON to array if not empty
+                            let keywords = category.keywords ? JSON.parse(category.keywords) :
+                            []; // Convert JSON to array if not empty
 
                             // Create HTML for keywords
-                            let keywordsHtml = keywords.length > 0
-                                ? keywords.map(keyword => `<span class="p-1 mx-1 small bg-primary text-white rounded mr-1">${keyword}</span>`).join('')
-                                : '<span class="p-1 mx-1 small bg-secondary text-white rounded">No keywords available</span>';
+                            let keywordsHtml = keywords.length > 0 ?
+                                keywords.map(keyword =>
+                                    `<span class="p-1 mx-1 small codefotech_color text-white rounded mr-1">${keyword}</span>`
+                                    ).join('') :
+                                '<span class="p-1 mx-1 small bg-secondary text-white rounded">No keywords available</span>';
 
                             let categoryHtml = `
                             <div class="col-md-4 mb-4">
@@ -98,12 +104,12 @@
                         pagination.append(paginationHtml);
 
                         // Attach click event to pagination buttons
-                        $('#pagination button').on('click', function () {
+                        $('#pagination button').on('click', function() {
                             let page = $(this).data('page');
                             loadCategories(page);
                         });
                     },
-                    error: function (xhr, status, error) {
+                    error: function(xhr, status, error) {
                         console.error("Error loading categories: ", error);
                     }
                 });
