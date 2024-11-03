@@ -21,28 +21,21 @@ Route::middleware('guest')->group(function () {
     Route::get('login', [LoginController::class, 'login'])->name('login');
     Route::post('login-check', [LoginController::class, 'logincheck'])->name('login.check');
 });
-
-Route::get('/', [FrontendController::class, 'frontend'])->name('home');
-Route::get('/home', [FrontendController::class, 'frontend'])->name('homes');
-
-
-
-
 Route::get( 'logout', array( LoginController::class, 'logout' ) )->name( 'logout' );
 
 
 
+
+Route::get('/', [FrontendController::class, 'home'])->name('home');
+Route::get('/about', [FrontendController::class, 'about'])->name('about');
+Route::get('/blog', [FrontendController::class, 'blog'])->name('blog');
+Route::get('/blog/blog_details', [FrontendController::class, 'blog_details'])->name('blog_details');
+Route::get('/service', [FrontendController::class, 'service'])->name('service');
+Route::get('/product', [FrontendController::class, 'product'])->name('product');
+
+
+
+
+
 Route::get( 'logs', array( \Rap2hpoutre\LaravelLogViewer\LogViewerController::class, 'index' ) );
-
-
-
-Route::get('/', function () {
-    return view('frontend.layouts.main');
-});
-Route::get('/blog', function () {
-    return view('frontend.layouts.blog');
-});
-Route::get('/blog/blog_details', function () {
-    return view('frontend.layouts.blog_details');
-});
 

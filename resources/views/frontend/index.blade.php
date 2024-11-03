@@ -7,7 +7,7 @@
     <meta content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
           name="viewport">
 
-    <title>Codefotech</title>
+    <title>Codefotech - @yield('title')</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 

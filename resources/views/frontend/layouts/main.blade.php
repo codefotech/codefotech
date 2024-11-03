@@ -1,5 +1,9 @@
 @extends('frontend.index')
 
+@section('title')
+Home
+@endsection
+
 @section('header-resources')
 @endsection
 

@@ -1,5 +1,9 @@
 @extends('frontend.index')
 
+@section('title')
+Blog
+@endsection
+
 @section('header-resources')
 @endsection
 
