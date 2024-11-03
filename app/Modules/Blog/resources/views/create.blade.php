@@ -1,4 +1,4 @@
-@extends('backend.index')
+@extends('backend.layouts.content')
 
 @section('header-resources')
     @include('backend.partials.datatable_css')
@@ -11,7 +11,7 @@
     </style>
 @endsection
 
-@section('dashboard-content')
+@section('content')
     {!! Form::open([
         'route' => 'blog.store',
         'method' => 'post',
@@ -35,6 +35,17 @@
 
                 <!-- /.card-header -->
                 <div class="card-body demo-vertical-spacing">
+
+                    <div class="form-group pb-3">
+                        <img id="newPhoto" src="{{ asset('assets/images/no_image.png') }}"
+                             style="height:120px;" />
+                        <br />
+
+                        <label class="form-label">Existing Photo</label>
+                        <input
+                            oninput="document.getElementById('newPhoto').src=window.URL.createObjectURL(this.files[0])"
+                            type="file" class="form-control" id="photoCreate">
+                    </div>
 
                     <div class="input-group row {{ $errors->has('heading') ? 'has-error' : '' }}">
                         {!! Form::label('heading', 'Heading', ['class' => 'col-md-3 control-label required-star']) !!}
@@ -72,7 +83,7 @@
                     <div class="input-group row {{ $errors->has('comments') ? 'has-error' : '' }}">
                         {!! Form::label('comments', 'Comments', ['class' => 'col-md-3 control-label']) !!}
                         <div class="col-md-9">
-                            {!! Form::text('comments', old('comments'), [
+                            {!! Form::textarea('comments', old('comments'), [
                                 'class' => 'form-control',
                                 'placeholder' => 'Enter Comments',
                             ]) !!}
@@ -83,7 +94,7 @@
                     <div class="input-group row {{ $errors->has('content') ? 'has-error' : '' }}">
                         {!! Form::label('content', 'Content', ['class' => 'col-md-3 control-label']) !!}
                         <div class="col-md-9">
-                            {!! Form::text('content', old('content'), [
+                            {!! Form::textarea('content', old('content'), [
                                 'class' => 'form-control',
                                 'placeholder' => 'Enter Content',
                             ]) !!}
@@ -94,7 +105,7 @@
                     <div class="input-group row {{ $errors->has('blog_quote') ? 'has-error' : '' }}">
                         {!! Form::label('blog_quote', 'Blog Quote', ['class' => 'col-md-3 control-label']) !!}
                         <div class="col-md-9">
-                            {!! Form::text('blog_quote', old('blog_quote'), [
+                            {!! Form::textarea('blog_quote', old('blog_quote'), [
                                 'class' => 'form-control',
                                 'placeholder' => 'Enter Blog Quote',
                             ]) !!}
@@ -150,16 +161,18 @@
                         </div>
                     </div>
 
-                    <div class="input-group row {{ $errors->has('email') ? 'has-error' : '' }}">
-                        {!! Form::label('email', 'Email', ['class' => 'col-md-3 control-label required-star']) !!}
+                    <div class="input-group row {{$errors->has('email') ? 'has-error' : ''}}">
+                        {!! Form::label('email', 'Email:', ['class' => 'col-md-3 control-label required-star']) !!}
                         <div class="col-md-9">
-                            {!! Form::text('email', old('email'), [
+                            {!! Form::text('email', $email, [
                                 'class' => 'form-control required',
+                                'readonly' => true, // Make the field readonly
                                 'placeholder' => 'Enter Email',
                             ]) !!}
                             {!! $errors->first('email', '<span class="help-block text-danger">:message</span>') !!}
                         </div>
                     </div>
+
 
                     <div class="input-group row {{ $errors->has('website') ? 'has-error' : '' }}">
                         {!! Form::label('website', 'Website', ['class' => 'col-md-3 control-label']) !!}
@@ -185,6 +198,8 @@
             </div>
         </div>
     </div>
+
+    @include('backend.plugins.image_upload')
 @endsection
 
 @section('footer-script')

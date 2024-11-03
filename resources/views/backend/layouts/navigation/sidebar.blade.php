@@ -1,7 +1,7 @@
 <!-- ================== Sidebar Start ================== -->
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
-        <a href="index.html" class="app-brand-link">
+        <a href="#" class="app-brand-link">
             <span class="app-brand-logo demo">
                 <span style="color: var(--bs-primary)">
                     <?xml version="1.0" encoding="utf-8"?>
@@ -45,6 +45,14 @@
             <a href="javascript:void(0);" class="menu-link menu-toggle">
                 <i class="menu-icon tf-icons mdi mdi-home-outline"></i>
                 <div data-i18n="Dashboards">Dashboards</div>
+            </a>
+        </li>
+
+        <!-- Blog -->
+        <li class="menu-item">
+            <a href="{{ route('user.list') }}" class="menu-link">
+                <i class="menu-icon tf-icons mdi mdi-account-outline"></i>
+                <div data-i18n="User">User</div>
             </a>
         </li>
 

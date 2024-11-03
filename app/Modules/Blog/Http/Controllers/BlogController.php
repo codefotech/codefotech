@@ -8,14 +8,17 @@ use App\Modules\Blog\Models\Blog;
 use Exception;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\View\View;
+use App\Traits\FileUploadTrait;
 use Illuminate\Support\Facades\Session;
 use Yajra\DataTables\Facades\DataTables;
 
 class BlogController extends Controller
 {
+    use FileUploadTrait;
     /**
      * Display the module welcome screen
      *
@@ -24,10 +27,13 @@ class BlogController extends Controller
     public function list( Request $request ) {
         try {
             if ( $request->ajax() && $request->isMethod( 'post' ) ) {
-                $list = Blog::select( 'id', 'heading', 'name', 'title', 'comments', 'content', 'blog_quote', 'categories', 'date', 'posts', 'post_date', 'tags', 'email', 'website' )
+                $list = Blog::select( 'id', 'image', 'heading', 'name', 'title', 'comments', 'content', 'blog_quote', 'categories', 'date', 'posts', 'post_date', 'tags', 'email', 'website' )
                     ->orderBy( 'id' )
                     ->get();
                 return Datatables::of( $list )
+                    ->editColumn( 'image', function ( $list ) {
+                        return $list->image;
+                    } )
                     ->editColumn( 'heading', function ( $list ) {
                         return $list->heading;
                     } )
@@ -83,27 +89,33 @@ class BlogController extends Controller
 
     }
 
-    public function create(): View | RedirectResponse {
+    public function create(): View | RedirectResponse | StoreBlogRequest {
         try {
-            $data['categories_list'] = array(
-                ''    => 'Select One',
-                'General'  => 'General',
-                'Lifestyle'  => 'Lifestyle',
-                'Travel'  => 'Travel',
-                'Design'  => 'Design',
-                'Development'  => 'Development',
-                'Marketing'  => 'Marketing',
-                'Creative' => 'Creative',
-                'Educaion' => 'Educaion',
-            );
-            return view( 'Blog::create', $data );
+            $email = Auth::user()->email;
 
-        } catch ( Exception $exception ) {
-            Log::error( "Error occurred in Blog@create ({$exception->getFile()}:{$exception->getLine()}): {$exception->getMessage()}" );
-            Session::flash( 'error', "Something went wrong during application data create [Blog-102]" );
+            $data = [
+                'categories_list' => [
+                    ''           => 'Select One',
+                    'General'    => 'General',
+                    'Lifestyle'  => 'Lifestyle',
+                    'Travel'     => 'Travel',
+                    'Design'     => 'Design',
+                    'Development'=> 'Development',
+                    'Marketing'  => 'Marketing',
+                    'Creative'   => 'Creative',
+                    'Education'  => 'Education',
+                ],
+                'email' => $email,
+            ];
+            return view('Blog::create', $data);
+
+        } catch (Exception $exception) {
+            Log::error("Error occurred in Blog@create ({$exception->getFile()}:{$exception->getLine()}): {$exception->getMessage()}");
+            Session::flash('error', "Something went wrong during application data create [Blog-102]");
             return redirect()->back();
         }
     }
+
 
     public function store(StoreBlogRequest $request)
     {
@@ -113,6 +125,12 @@ class BlogController extends Controller
             } else {
                 $blog = new Blog();
             }
+            $image = $blog->image; // Retain the existing image
+            if ($request->hasFile('image')) {
+                $image = $this->uploadFile($request->file('image'));
+            }
+
+            $blog->image = $image;
             $blog->heading = $request->get('heading');
             $blog->name = $request->get('name');
             $blog->title = $request->get('title');

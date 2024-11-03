@@ -55,22 +55,22 @@
             <li class="nav-item navbar-dropdown dropdown-user dropdown">
                 <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
                     <div class="avatar avatar-online">
-                        <img src="{{ asset('assets/img/avatars/1.png') }}" alt class="w-px-40 h-auto rounded-circle" />
+                        <img src="{{ !empty(Auth::user()->image) ? url(Auth::user()->image) : url('assets/images/no_image.png') }}" alt class="w-px-40 h-auto rounded-circle" />
                     </div>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-end">
                     <li>
-                        <a class="dropdown-item" href="pages-account-settings-account.html">
+                        <a class="dropdown-item" href="javascript:;">
                             <div class="d-flex">
                                 <div class="flex-shrink-0 me-3">
                                     <div class="avatar avatar-online">
-                                        <img src="{{ asset('assets/img/avatars/1.png') }}" alt
+                                        <img src="{{ !empty(Auth::user()->image) ? url(Auth::user()->image) : url('assets/images/no_image.png') }}" alt
                                             class="w-px-40 h-auto rounded-circle" />
                                     </div>
                                 </div>
                                 <div class="flex-grow-1">
-                                    <span class="fw-semibold d-block">John Doe</span>
-                                    <small class="text-muted">Admin</small>
+                                    <span class="fw-semibold d-block">{{ !empty(Auth::user()->name) ? Auth::user()->name : 'N/A' }}</span>
+                                    <small class="text-muted">{{ !empty(Auth::user()->role->title) ? Auth::user()->role->title : 'N/A' }}</small>
                                 </div>
                             </div>
                         </a>
@@ -79,13 +79,13 @@
                         <div class="dropdown-divider"></div>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="pages-profile-user.html">
+                        <a class="dropdown-item" href="{{ route('profile') }}">
                             <i class="mdi mdi-account-outline me-2"></i>
                             <span class="align-middle">My Profile</span>
                         </a>
                     </li>
                     <li>
-                        <a class="dropdown-item" href="pages-account-settings-account.html">
+                        <a class="dropdown-item" href="javascript:;">
                             <i class="mdi mdi-cog-outline me-2"></i>
                             <span class="align-middle">Settings</span>
                         </a>

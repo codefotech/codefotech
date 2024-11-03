@@ -47,9 +47,9 @@
                                     {!! Form::label('password', 'New Password') !!}
                                     {!! $errors->first('password', '<span class="help-block text-danger">:message</span>') !!}
                                 </div>
-                                <span class="input-group-text cursor-pointer">
-            <i class="mdi mdi-eye-off-outline"></i>
-        </span>
+                                <span class="input-group-text cursor-pointer form-password">
+                                    <i onclick="togglePasswordVisibility()" class="mdi mdi-eye-off-outline"></i>
+                                </span>
                             </div>
                         </div>
 
@@ -65,9 +65,9 @@
                                     {!! Form::label('password_confirmation', 'Confirm Password') !!}
                                     {!! $errors->first('password_confirmation', '<span class="help-block text-danger">:message</span>') !!}
                                 </div>
-                                <span class="input-group-text cursor-pointer">
-            <i class="mdi mdi-eye-off-outline"></i>
-        </span>
+                                <span class="input-group-text cursor-pointer form-password">
+                                    <i onclick="togglePasswordVisibility()" class="mdi mdi-eye-off-outline"></i>
+                                </span>
                             </div>
                         </div>
 
@@ -97,4 +97,20 @@
 @endsection
 
 @section('footer-script')
+    <script>
+        function togglePasswordVisibility() {
+            let password = document.getElementById("password");
+            let eyeIcon = document.querySelector('.form-password i');
+
+            if (password.type === "password") {
+                password.type = "text";
+                eyeIcon.classList.remove('mdi-eye-off-outline');
+                eyeIcon.classList.add('mdi-eye-outline');
+            } else {
+                password.type = "password";
+                eyeIcon.classList.remove('mdi-eye-outline');
+                eyeIcon.classList.add('mdi-eye-off-outline');
+            }
+        }
+    </script>
 @endsection

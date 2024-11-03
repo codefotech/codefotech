@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Modules\UserPermission\Models\Role;
+
 
 class User extends Authenticatable
 {
@@ -18,9 +20,14 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'user_name',
+        'name',
         'email',
         'password',
+        'role_id',
+        'department_id',
+        'designation_id',
+        'image',
+        'status'
     ];
 
     /**
@@ -41,4 +48,24 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //method
+
+    public function hasPermission($permission): bool
+    {
+        return $this->role->permissions()->where('slug', $permission)->first() ? true : false;
+    }
+
+    public function hasModulePermission($module): bool
+    {
+        return $this->role->modules()->where('slug', $module)->first() ? true : false;
+    }
+
+    //Relationships
+
+
+    public function role(){
+        return $this->belongsTo(Role::class);
+    }
+    
 }

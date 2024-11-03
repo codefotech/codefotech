@@ -14,20 +14,12 @@ return new class extends Migration
         Schema::create('blog', function (Blueprint $table) {
             $table->id();
             $table->string('image')->nullable();
-            $table->string('content_image')->nullable();
             $table->string('heading')->nullable();
-            $table->string('name')->nullable();
-            $table->string('title')->nullable();
-            $table->string('comments')->nullable();
             $table->text('content')->nullable();
             $table->text('blog_quote')->nullable();
-            $table->string('categories')->nullable();
-            $table->date('date')->nullable();
-            $table->string('posts')->nullable();
-            $table->date('post_date')->nullable();
+            $table->string('title')->nullable();
             $table->string('tags')->nullable();
-            $table->string('email')->nullable();
-            $table->string('website')->nullable();
+            $table->string('categories')->nullable();
             $table->integer('order')->nullable();
             $table->timestamps();
         });

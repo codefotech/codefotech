@@ -1,4 +1,4 @@
-@extends('backend.index')
+@extends('backend.layouts.content')
 
 @section('header-resources')
     @include('backend.partials.datatable_css')
@@ -11,7 +11,7 @@
     </style>
 @endsection
 
-@section('dashboard-content')
+@section('content')
     {!! Form::open([
         'route' => 'blog.store',
         'method' => 'post',
@@ -37,6 +37,23 @@
                 <!-- /.card-header -->
                 <div class="card-body demo-vertical-spacing">
                     <input type="hidden" name="id" value="{{ $data->id }}">
+
+
+
+                    <div class="form-group pb-3">
+                        <label for="" class="control-label">Existing Photo</label>
+                        <div class="pt-3">
+                            <img src="{{ asset($data->image ?? 'assets/images/no_image.png') }}" class="existing-photo" id="oldPhoto" style="height:120px;">
+                            <br><br>
+                            <input
+                                oninput="document.getElementById('oldPhoto').src = window.URL.createObjectURL(this.files[0])"
+                                type="file" class="form-control" id="photoUpdate">
+
+                            <br>
+                            <input type="text" class="form-control" id="photoFilePath"
+                                   value="{{ $blogData['image'] ?? '' }}" readonly disabled>
+                        </div>
+                    </div>
 
 
                     <div class="input-group row {{ $errors->has('heading') ? 'has-error' : '' }}">
@@ -72,7 +89,7 @@
                     <div class="input-group row {{ $errors->has('comments') ? 'has-error' : '' }}">
                         {!! Form::label('comments', 'Comments', ['class' => 'col-md-3 control-label']) !!}
                         <div class="col-md-9">
-                            {!! Form::text('comments', $data->comments, [
+                            {!! Form::textarea('comments', $data->comments, [
                                 'class' => 'form-control',
                                 'placeholder' => 'Enter Comments',
                             ]) !!}
@@ -82,7 +99,7 @@
                     <div class="input-group row {{ $errors->has('content') ? 'has-error' : '' }}">
                         {!! Form::label('content', 'Content', ['class' => 'col-md-3 control-label']) !!}
                         <div class="col-md-9">
-                            {!! Form::text('content', $data->content, [
+                            {!! Form::textarea('content', $data->content, [
                                 'class' => 'form-control',
                                 'placeholder' => 'Enter Content',
                             ]) !!}
@@ -92,7 +109,7 @@
                     <div class="input-group row {{ $errors->has('blog_quote') ? 'has-error' : '' }}">
                         {!! Form::label('blog_quote', 'Blog Quote', ['class' => 'col-md-3 control-label']) !!}
                         <div class="col-md-9">
-                            {!! Form::text('blog_quote', $data->blog_quote, [
+                            {!! Form::textarea('blog_quote', $data->blog_quote, [
                                 'class' => 'form-control',
                                 'placeholder' => 'Enter Blog Quote',
                             ]) !!}

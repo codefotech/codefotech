@@ -22,8 +22,8 @@
                     </div>
                     <!-- /Logo -->
                     <div class="card-body mt-2">
-                        <h4 class="mb-2 fw-semibold">Adventure starts here 🚀</h4>
-                        <p class="mb-4">Make your app management easy and fun!</p>
+{{--                        <h4 class="mb-2 fw-semibold">Adventure starts here 🚀</h4>--}}
+{{--                        <p class="mb-4">Make your app management easy and fun!</p>--}}
 
                         {!! Form::open([
                             'route' => 'register.store',
@@ -34,14 +34,14 @@
                             'role' => 'form'
                         ]) !!}
 
-                        <div class="form-floating form-floating-outline mb-3 {{ $errors->has('user_name') ? 'has-error' : '' }}">
-                            {!! Form::text('user_name', old('user_name'), [
+                        <div class="form-floating form-floating-outline mb-3 {{ $errors->has('name') ? 'has-error' : '' }}">
+                            {!! Form::text('name', old('name'), [
                                 'class' => 'form-control',
-                                'id' => 'user_name',
-                                'placeholder' => 'Enter your username',
+                                'id' => 'name',
+                                'placeholder' => 'Enter your name',
                             ]) !!}
-                            {!! Form::label('user_name', 'Username') !!}
-                            {!! $errors->first('user_name', '<span class="help-block text-danger">:message</span>') !!}
+                            {!! Form::label('name', 'Name') !!}
+                            {!! $errors->first('name', '<span class="help-block text-danger">:message</span>') !!}
                         </div>
 
                         <div class="form-floating form-floating-outline mb-3 {{ $errors->has('email') ? 'has-error' : '' }}">
@@ -67,12 +67,13 @@
                                         {!! Form::label('password', 'Password') !!}
                                         {!! $errors->first('password', '<span class="help-block text-danger">:message</span>') !!}
                                     </div>
-                                    <span class="input-group-text cursor-pointer">
-                                        <i class="mdi mdi-eye-off-outline"></i>
+                                    <span class="input-group-text cursor-pointer form-password">
+                                        <i onclick="togglePasswordVisibility()" class="mdi mdi-eye-off-outline"></i>
                                     </span>
                                 </div>
                             </div>
                         </div>
+
 
                         <div class="mb-3">
                             {!! Form::button('Register', ['type' => 'submit', 'class' => 'btn btn-primary d-grid w-100']) !!}
@@ -93,21 +94,21 @@
                         </div>
 
                         <div class="d-flex justify-content-center gap-2">
-                            <a href="javascript:" class="btn btn-icon btn-lg rounded-pill btn-text-facebook">
+                            <a href="https://www.facebook.com/profile.php?id=61558796675458" target="_blank" class="btn btn-icon btn-lg rounded-pill btn-text-facebook">
                                 <i class="tf-icons mdi mdi-24px mdi-facebook"></i>
                             </a>
 
-                            <a href="javascript:" class="btn btn-icon btn-lg rounded-pill btn-text-twitter">
+                            <a href="https://www.linkedin.com/company/codefotech/" target="_blank" class="btn btn-icon btn-lg rounded-pill btn-text-twitter">
                                 <i class="tf-icons mdi mdi-24px mdi-twitter"></i>
                             </a>
 
-                            <a href="javascript:" class="btn btn-icon btn-lg rounded-pill btn-text-github">
+                            <a href="https://github.com/codefotech/" target="_blank" class="btn btn-icon btn-lg rounded-pill btn-text-github">
                                 <i class="tf-icons mdi mdi-24px mdi-github"></i>
                             </a>
 
-                            <a href="javascript:" class="btn btn-icon btn-lg rounded-pill btn-text-google-plus">
-                                <i class="tf-icons mdi mdi-24px mdi-google"></i>
-                            </a>
+{{--                            <a href="javascript:" class="btn btn-icon btn-lg rounded-pill btn-text-google-plus">--}}
+{{--                                <i class="tf-icons mdi mdi-24px mdi-google"></i>--}}
+{{--                            </a>--}}
                         </div>
                     </div>
                 </div>
@@ -123,4 +124,20 @@
 @endsection
 
 @section('footer-script')
+    <script>
+        function togglePasswordVisibility() {
+            let password = document.getElementById("password");
+            let eyeIcon = document.querySelector('.form-password i');
+
+            if (password.type === "password") {
+                password.type = "text";
+                eyeIcon.classList.remove('mdi-eye-off-outline');
+                eyeIcon.classList.add('mdi-eye-outline');
+            } else {
+                password.type = "password";
+                eyeIcon.classList.remove('mdi-eye-outline');
+                eyeIcon.classList.add('mdi-eye-off-outline');
+            }
+        }
+    </script>
 @endsection

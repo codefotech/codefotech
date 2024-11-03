@@ -1,10 +1,10 @@
-@extends('backend.index')
+@extends('backend.layouts.content')
 
 @section('header-resources')
     @include('backend.partials.datatable_css')
 @endsection
 
-@section('dashboard-content')
+@section('content')
     <div class="row">
         <div class="col-md-12 p-5 pt-3">
             <div class="card card-outline card-primary">
