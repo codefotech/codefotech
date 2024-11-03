@@ -1,5 +1,5 @@
 <!-- ======= Footer Start ======= -->
-<footer id="contact" class="contact container-fluid text-light mt-5 wow fadeInUp" data-wow-delay="0.1s" style="background: #efedfd;">
+<footer id="contact" class="contact container-fluid bg-light text-light mt-5 wow fadeInUp" data-wow-delay="0.1s">
     <div class="container">
         <div class="row gx-5">
             <div class="col-lg-4 col-md-6 footer-about">
@@ -13,12 +13,6 @@
                     <p class="mt-3 mb-4">Lorem diam sit erat dolor elitr et, diam lorem justo amet clita stet eos sit.
                         Elitr dolor duo lorem, elitr clita ipsum sea. Diam amet erat lorem stet eos. Diam amet et kasd
                         eos duo.</p>
-                    <form action>
-                        <div class="input-group">
-                            <input type="text" class="form-control border-white p-3" placeholder="Your Email">
-                            <button class="btn btn-danger">Newsletter</button>
-                        </div>
-                    </form>
                 </div>
             </div>
             <div class="col-lg-8 col-md-6">
