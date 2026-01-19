@@ -101,7 +101,7 @@ To empower businesses with reliable and modern technology solutions that are eff
 
 ## 🌍 Website
 
-[https://www.codefotech.com](https://www.codefotech.com)
+[https://codefotech.com](https://codefotech.com)
 
 ---
 
@@ -110,7 +110,7 @@ To empower businesses with reliable and modern technology solutions that are eff
 For business inquiries, collaborations, or support:
 
 * Email: [info@codefotech.com](mailto:info@codefotech.com)
-* Website: [https://www.codefotech.com](https://www.codefotech.com)
+* Website: [https://codefotech.com](https://codefotech.com)
 
 ---
 
